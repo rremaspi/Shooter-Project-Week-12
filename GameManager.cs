@@ -13,7 +13,11 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI scoreText;
 
+    [SerializeField] private TextMeshProUGUI livesText;
+
     private int score;
+    private int lifeTracker;
+    public static int lives;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +27,7 @@ public class GameManager : MonoBehaviour
         CreateSky();
         score = 0;
         scoreText.text = "Score: " + score;
+        livesText.text = "Lives: " + lives;
     }
 
     // Update is called once per frame
